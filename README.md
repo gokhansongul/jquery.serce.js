@@ -1,4 +1,4 @@
-Serce Slider Plugin for jQuery
+Serce Image Slider Plugin for jQuery
 ==============================
 Overview
 --------
