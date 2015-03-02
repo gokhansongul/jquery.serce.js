@@ -2,7 +2,7 @@ Serce Slider Plugin for jQuery
 ==============================
 Overview
 --------
-This is a serce slider plugin for the jQuery javascript library. It allows user to slide images on image mouseover.
+This is a slider plugin for the jQuery javascript library. It allows user to slide images on image mouseover.
 
 ### Usage
 First, include the jQuery and serce javascript files.
