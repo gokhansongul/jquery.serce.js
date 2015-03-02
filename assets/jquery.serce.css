@@ -1,0 +1,20 @@
+.serce-wrapper {
+    float: right;
+    right: 10px;
+    margin-top: -13px;
+    position: relative;
+}
+
+.serce-wrapper .serce-nav-item {
+    background: #dedede;
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    float: left;
+    margin-left: 3px;
+}
+
+.serce-wrapper .serce-nav-item.on {
+    background: #2e2e2e;
+}
+
