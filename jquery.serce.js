@@ -38,7 +38,12 @@
 
         };
         var mouseLeave = function(e){
+            var $img = $(this).find('img');
+            var defaultImageSrc = $img.data('images') && $img.data('images').split(',')[0] ? $img.data('images').split(',')[0] : null;
             $(this).find('.serce-wrapper').remove();
+            if(defaultImageSrc){
+                $img.attr('src', $img.data('images').split(',')[0])
+            }
         };
 
         this.each(function() {
@@ -77,3 +82,9 @@
     };
 
 }( jQuery ));
+
+
+
+
+
+
