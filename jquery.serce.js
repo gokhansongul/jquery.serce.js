@@ -10,6 +10,7 @@
             limits,
             offsetX,
             images,
+            newImg,
             imgSelector = cfg.imgSelector || 'img',
             noImagePath = cfg.noImagePath || "",
             $wrapEl = $(this);
@@ -35,9 +36,12 @@
                 }
             }
             var $this = $(this);
-            var newImg = new Image();
+            $(newImg).data('refImg', $this);
 
-            var loadFn = function(){ $this.attr('src', images[index]);};
+            var loadFn = function(){
+                var $refImg = $(newImg).data("refImg");
+                $refImg.attr('src', images[index]);
+            };
 
             newImg.onerror= function(){};
 
@@ -88,10 +92,12 @@
             var $img = $this.find(imgSelector);
 
             $this.hover(function(){
+
                 images = $img.data("images") ? $img.data("images").split(",") : [];
                 length = images.length;
                 if(length > 1){
                     buildNavItems($img);
+                    newImg = new Image();
                     $img.bind("mousemove", mouseMove);
                 }
             }, mouseLeave);
